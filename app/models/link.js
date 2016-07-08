@@ -2,7 +2,8 @@ import Model from 'ember-data/model';
 import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
-  thumbnailImage:           belongsTo('media', {async: false}),
-  images:                   hasMany('media', {async: false}),
-  videos:                   hasMany('media', {async: false})
+  thumbnailImage:           belongsTo('asset', {async: false, inverse: 'thumbnailImage'}),
+  images:                   hasMany('asset', {async: false, inverse: 'images'}),
+  videos:                   hasMany('asset', {async: false, inverse: 'videos'}),
+  hotel:                    belongsTo('hotel', {async: false})
 });

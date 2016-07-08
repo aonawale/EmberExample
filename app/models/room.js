@@ -1,5 +1,5 @@
 import attr from 'ember-data/attr';
-import ContentProvider from 'content-provider';
+import ContentProvider from './content-provider';
 import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default ContentProvider.extend({
@@ -16,5 +16,6 @@ export default ContentProvider.extend({
   hotel:                              belongsTo('hotel', {async: false}),
   rates:                              hasMany('rate', {async: false}),
   cancellationPolicy:                 hasMany('cancellation-policy', {async: false}),
-  links:                              belongsTo('link', {async: false})
+  links:                              belongsTo('link', {async: false}),
+  group:                              attr('string')
 });

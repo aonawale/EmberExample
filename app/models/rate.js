@@ -1,5 +1,5 @@
 import attr from 'ember-data/attr';
-import ContentProvider from 'content-provider';
+import ContentProvider from './content-provider';
 import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default ContentProvider.extend({

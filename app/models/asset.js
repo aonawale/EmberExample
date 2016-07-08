@@ -6,5 +6,7 @@ export default Model.extend({
   href:                     attr('string'),
   title:                    attr('string'),
   description:              attr('string'),
-  link:                     belongsTo('link', {async: false})
+  thumbnailImage:           belongsTo('link', {async: false}),
+  images:                   belongsTo('link', {async: false}),
+  videos:                   belongsTo('link', {async: false})
 });
